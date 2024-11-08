@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/corpo.css">
+    <link rel="stylesheet" href="/css/1.css">
+    <link rel="icon" type="image/x-icon" href="logof.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <nav class="sticky-navbar">
+        <img id="logo" src="/images/logof.png" alt="logo image">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+        </label>
+
+        <div class="search-bar" >
+          <input type="text" placeholder="Search...">
+        </div>
+
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+
+            <a class="location" href="#"><input type="textbox" placeholder="search for area and location..." style="height:50px; width:250px "></a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>
+                Use your current location</a>
+        </div>
+
+        <ul class="nav-right">
+            <li><a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#5f6368"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                Home</a></li>
+
+            <li><a href="corpo.html"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+            Quick-aid corporatives</a></li>
+
+            <li><a href="offers.html"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" height="32px" width="32px" viewBox="0 0 122.88 122.88"><title>offer</title><path d="M13.7,49.54,8,33.63a3.47,3.47,0,0,1,2.1-4.44,3.93,3.93,0,0,1,.81-.18L27.3,27.3,29,10.79a3.47,3.47,0,0,1,3.81-3.1,2.9,2.9,0,0,1,.71.15l16,4.11L58.8,1.21A3.49,3.49,0,0,1,63.7.83a3.91,3.91,0,0,1,.61.68l9,12.17,15.91-5.8A3.48,3.48,0,0,1,93.69,10a3.44,3.44,0,0,1,.19.83l1.7,16.51L112.09,29a3.47,3.47,0,0,1,2.71,5.09l-7.3,13.77,14,10.83a3.46,3.46,0,0,1,.62,4.87,3.18,3.18,0,0,1-.72.7L109.2,73.33,115,89.24a3.48,3.48,0,0,1-2.08,4.45,3.44,3.44,0,0,1-.83.19l-16.51,1.7L93.88,112a3.48,3.48,0,0,1-3.81,3.1,3.61,3.61,0,0,1-1.27-.38L75,107.49l-10.85,14a3.46,3.46,0,0,1-5.57-.1l-9.08-12.25-15.91,5.74A3.47,3.47,0,0,1,29,112.05L27.3,97.29,10.53,93.82a3.46,3.46,0,0,1-2.7-4.09A2.62,2.62,0,0,1,8,89.11L13.7,73.34,1.4,64.23a3.48,3.48,0,0,1-.72-4.86,3.42,3.42,0,0,1,.77-.75L13.7,49.54Zm62.39-6.2L55.66,78.86a6.86,6.86,0,0,1-.67,1,2.76,2.76,0,0,1-.82.71,3.14,3.14,0,0,1-1.1.31,10.25,10.25,0,0,1-1.31.07H47.9a1.16,1.16,0,0,1-1.16-1.15,1.18,1.18,0,0,1,.21-.67L67.39,43.57a7.2,7.2,0,0,1,.65-1l0-.06a2.84,2.84,0,0,1,.78-.65A3.15,3.15,0,0,1,70,41.59h0a10,10,0,0,1,1.29-.07h3.85a1.16,1.16,0,0,1,1.16,1.15,1.18,1.18,0,0,1-.21.67Zm-7.4,36.07c-1.72-1.8-2.59-4.56-2.59-8.28s.87-6.48,2.59-8.28,4.52-2.7,8.4-2.7,6.68.9,8.4,2.7,2.58,4.56,2.58,8.28-.86,6.48-2.58,8.28-4.52,2.7-8.4,2.7-6.68-.9-8.4-2.7Zm6-11.44v8h1.3a16.21,16.21,0,0,0,3.27-.26c.22-.18.33-.67.33-1.46v-8h-3a3,3,0,0,0-1.58.26c-.21.18-.32.67-.32,1.46ZM37.39,60q-2.58-2.7-2.58-8.28t2.58-8.28q2.58-2.7,8.4-2.7t8.4,2.7q2.58,2.7,2.58,8.28T54.19,60q-2.58,2.7-8.4,2.7T37.39,60Zm6-11.44v8h3a2.93,2.93,0,0,0,1.57-.27c.22-.18.33-.67.33-1.46v-8H46.93a15.28,15.28,0,0,0-3.26.27c-.22.17-.33.66-.33,1.45ZM16,35.46l5,14a3.48,3.48,0,0,1-1.14,4.13L9.3,61.44,19.9,69.3a3.48,3.48,0,0,1,1.2,4L15.84,87.84,31,91a3.48,3.48,0,0,1,3,3.05l1.49,12.9,14.05-5.06A3.47,3.47,0,0,1,53.59,103l7.91,10.68,9.74-12.61A3.48,3.48,0,0,1,75.69,100l11.81,6.21L89,92.1A3.47,3.47,0,0,1,92.06,89L107,87.43,101.8,73.32a3.46,3.46,0,0,1,1.18-4l10.67-7.92-12.52-9.67A3.5,3.5,0,0,1,100,47.18l6.26-11.8L92.1,33.93A3.48,3.48,0,0,1,89,30.82L87.43,15.93,73.32,21.08a3.48,3.48,0,0,1-4-1.18L61.24,9l-7.8,9.07a3.48,3.48,0,0,1-3.5,1.1L35.5,15.5,33.92,30.78a3.47,3.47,0,0,1-3.1,3.14L16,35.46Z"/></svg>
+            Offers</a></li>
+
+            <li><a href="help.html"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80ZM364-182l48-110q-42-15-72.5-46.5T292-412l-110 46q23 64 71 112t111 72Zm-72-366q17-42 47.5-73.5T412-668l-46-110q-64 24-112 72t-72 112l110 46Zm188 188q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm116 178q63-24 110.5-71.5T778-364l-110-48q-15 42-46 72.5T550-292l46 110Zm72-368 110-46q-24-63-71.5-110.5T596-778l-46 112q41 15 71 45.5t47 70.5Z"/></svg>
+            Help</a></li>
+
+            <li><a href="sign.html"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+            Sign-up</a></li>
+        </ul>
+
+        <!-- for hamburger -->
+         <!-- Hidden checkbox -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+
+    <!-- Label for the checkbox to display the hamburger icon -->
+    <label for="nav-toggle" class="hamburger-icon">&#9776;</label>
+
+    <!-- Dropdown menu for mobile view -->
+    <div class="dropdown-menu">
+      <li><a href="corpo.html"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+        corporatives</a></li>
+
+        <li><a href="offers.html"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" height="32px" width="32px" viewBox="0 0 122.88 122.88"><title>offer</title><path d="M13.7,49.54,8,33.63a3.47,3.47,0,0,1,2.1-4.44,3.93,3.93,0,0,1,.81-.18L27.3,27.3,29,10.79a3.47,3.47,0,0,1,3.81-3.1,2.9,2.9,0,0,1,.71.15l16,4.11L58.8,1.21A3.49,3.49,0,0,1,63.7.83a3.91,3.91,0,0,1,.61.68l9,12.17,15.91-5.8A3.48,3.48,0,0,1,93.69,10a3.44,3.44,0,0,1,.19.83l1.7,16.51L112.09,29a3.47,3.47,0,0,1,2.71,5.09l-7.3,13.77,14,10.83a3.46,3.46,0,0,1,.62,4.87,3.18,3.18,0,0,1-.72.7L109.2,73.33,115,89.24a3.48,3.48,0,0,1-2.08,4.45,3.44,3.44,0,0,1-.83.19l-16.51,1.7L93.88,112a3.48,3.48,0,0,1-3.81,3.1,3.61,3.61,0,0,1-1.27-.38L75,107.49l-10.85,14a3.46,3.46,0,0,1-5.57-.1l-9.08-12.25-15.91,5.74A3.47,3.47,0,0,1,29,112.05L27.3,97.29,10.53,93.82a3.46,3.46,0,0,1-2.7-4.09A2.62,2.62,0,0,1,8,89.11L13.7,73.34,1.4,64.23a3.48,3.48,0,0,1-.72-4.86,3.42,3.42,0,0,1,.77-.75L13.7,49.54Zm62.39-6.2L55.66,78.86a6.86,6.86,0,0,1-.67,1,2.76,2.76,0,0,1-.82.71,3.14,3.14,0,0,1-1.1.31,10.25,10.25,0,0,1-1.31.07H47.9a1.16,1.16,0,0,1-1.16-1.15,1.18,1.18,0,0,1,.21-.67L67.39,43.57a7.2,7.2,0,0,1,.65-1l0-.06a2.84,2.84,0,0,1,.78-.65A3.15,3.15,0,0,1,70,41.59h0a10,10,0,0,1,1.29-.07h3.85a1.16,1.16,0,0,1,1.16,1.15,1.18,1.18,0,0,1-.21.67Zm-7.4,36.07c-1.72-1.8-2.59-4.56-2.59-8.28s.87-6.48,2.59-8.28,4.52-2.7,8.4-2.7,6.68.9,8.4,2.7,2.58,4.56,2.58,8.28-.86,6.48-2.58,8.28-4.52,2.7-8.4,2.7-6.68-.9-8.4-2.7Zm6-11.44v8h1.3a16.21,16.21,0,0,0,3.27-.26c.22-.18.33-.67.33-1.46v-8h-3a3,3,0,0,0-1.58.26c-.21.18-.32.67-.32,1.46ZM37.39,60q-2.58-2.7-2.58-8.28t2.58-8.28q2.58-2.7,8.4-2.7t8.4,2.7q2.58,2.7,2.58,8.28T54.19,60q-2.58,2.7-8.4,2.7T37.39,60Zm6-11.44v8h3a2.93,2.93,0,0,0,1.57-.27c.22-.18.33-.67.33-1.46v-8H46.93a15.28,15.28,0,0,0-3.26.27c-.22.17-.33.66-.33,1.45ZM16,35.46l5,14a3.48,3.48,0,0,1-1.14,4.13L9.3,61.44,19.9,69.3a3.48,3.48,0,0,1,1.2,4L15.84,87.84,31,91a3.48,3.48,0,0,1,3,3.05l1.49,12.9,14.05-5.06A3.47,3.47,0,0,1,53.59,103l7.91,10.68,9.74-12.61A3.48,3.48,0,0,1,75.69,100l11.81,6.21L89,92.1A3.47,3.47,0,0,1,92.06,89L107,87.43,101.8,73.32a3.46,3.46,0,0,1,1.18-4l10.67-7.92-12.52-9.67A3.5,3.5,0,0,1,100,47.18l6.26-11.8L92.1,33.93A3.48,3.48,0,0,1,89,30.82L87.43,15.93,73.32,21.08a3.48,3.48,0,0,1-4-1.18L61.24,9l-7.8,9.07a3.48,3.48,0,0,1-3.5,1.1L35.5,15.5,33.92,30.78a3.47,3.47,0,0,1-3.1,3.14L16,35.46Z"/></svg>
+        Offers</a></li>
+
+        <li><a href="help.html"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80ZM364-182l48-110q-42-15-72.5-46.5T292-412l-110 46q23 64 71 112t111 72Zm-72-366q17-42 47.5-73.5T412-668l-46-110q-64 24-112 72t-72 112l110 46Zm188 188q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm116 178q63-24 110.5-71.5T778-364l-110-48q-15 42-46 72.5T550-292l46 110Zm72-368 110-46q-24-63-71.5-110.5T596-778l-46 112q41 15 71 45.5t47 70.5Z"/></svg>
+        Help</a></li>
+
+        <li><a href="sign.html"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+        Sign-up</a></li>
+    </div>
+        
+</nav>
+
+<!-- content -->
+
+<!-- About QuickAid -->
+ <div class="blockview">
+<section class="features" id="features">
+    <h3 class="heading">About <span>QuickAid</span></h3>
+</section>
+</div>
+
+<!-- conent -->
+<div class="blockview">
+<div class="container my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Our Mission <span class="text-body-secondary">Medicine On Door</span></h2>
+          <p>At QuickAid, our mission is to make healthcare accessible to everyone by delivering essential medications and medical supplies directly to your doorstep. We strive to bridge the gap between healthcare providers and patients, ensuring timely and affordable access to necessary treatments.</p>
+        </div>
+        <div class="col-md-5">
+            <img width="300" height="300" src="/images/mediondoor.avif" alt="Our Mission">
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="blockview"></div>
+<div class="container my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Our Vision <span class="text-body-secondary">A Healthier Tomorrow</span></h2>
+          <p>Our vision at QuickAid is to revolutionize the way people access healthcare, creating a future where quality medical services and products are just a click away. We envision a world where no one is deprived of essential healthcare due to geographical, financial, or social barriers.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img width="300" height="300" src="/images/healthy2morrow.avif" alt="Our Vision">
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="blockview">
+<div class="container my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Our Values <span class="text-body-secondary">Integrity, Innovation, Compassion</span></h2>
+          <p>At QuickAid, our core values guide everything we do. We are driven by:</p>
+          <p>These values are the foundation of QuickAid, driving our mission to make healthcare more accessible, affordable, and effective for all.</p>
+        </div>
+        <div class="col-md-5">
+            <img width="300" height="300" src="/images/innovative.avif" alt="Our Values">
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="blockview">
+<div class="container my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">QuickAid Walkthrough <span class="text-body-secondary">Your Guide to Easy Healthcare</span></h2>
+          <p>Welcome to QuickAid, your trusted partner in healthcare. Here's a quick guide on how to make the most of our services:</p>
+          <p>QuickAid is designed to make healthcare as convenient and accessible as possible. Start your journey with us today and experience the difference!</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img width="300" height="300" src="/images/walkthrough.avif" alt="Walkthrough">
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- our bussiness -->
+ <div class="blockview">
+<section class="features" id="features">
+    <h3 class="heading">Our <span>Bussiness</span></h3>
+</section>
+</div>
+
+<div class="blockview">
+<div width="100%" class="InfoCard">
+    <div class="offer">
+        <div>
+            <h2>QuickAid: Revolutionizing Healthcare Delivery and Services</h2>
+            <p>At QuickAid, our business revolves around bridging the gap between healthcare providers and patients by offering a seamless, accessible, and affordable platform for all your medical needs. We partner with local pharmacies, clinics, and wellness centers to deliver high-quality services directly to your doorstep.</p>
+            <p>Our core business offerings include:</p>
+            <ul>
+                <li><strong>Medication Delivery:</strong> We ensure that essential prescription and over-the-counter medications reach you promptly and efficiently, all while offering exclusive discounts that make healthcare more affordable.</li>
+                <li><strong>Healthcare Consultations:</strong> QuickAid connects you with qualified healthcare professionals for virtual consultations, allowing you to receive expert advice from the comfort of your home.</li>
+                <li><strong>Wellness Products:</strong> Our extensive range of wellness products, including vitamins, supplements, and personal care items, is available at unbeatable prices, helping you maintain a healthy lifestyle.</li>
+                <li><strong>Medical Supplies:</strong> From first aid kits to specialized medical equipment, QuickAid ensures that you have access to top-quality supplies when you need them most.</li>
+            </ul>
+            <p>Our business model is built on trust, quality, and convenience. By partnering with trusted local providers, we not only support the community but also ensure that our users receive the best care and products at the best prices.</p>
+            <p>QuickAid is more than just a service—it's a commitment to enhancing your health and well-being. Join us in our mission to make healthcare accessible, affordable, and convenient for everyone.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+<!-- counter -->
+<div class="blockview">
+<section class="features" id="features">
+    <h3 class="heading">User's <span>Count</span></h3>
+</section>
+<div class="counter-group">
+    <div class="counter-container">
+        <i class="fas fa-mug-hot fa-3x"></i>
+        <div class="counter" data-target="4000"></div>
+        <span>Orders</span>
+    </div>
+    <div class="counter-container">
+        <i class="fas fa-users fa-3x"></i>
+        <div class="counter" data-target="15000"></div>
+        <span>Happy Customers</span>
+    </div>
+    <div class="counter-container">
+        <i class="fas fa-tasks fa-3x"></i>
+        <div class="counter" data-target="500"></div>
+        <span>Cities In India</span>
+    </div>
+</div>
+</div>
+
+<!-- <script src="script.js"></script> -->
+
+<!-- delivery -->
+ <div class="blockview">
+<section class="features" id="features">
+    <h3 class="heading">Delivery to <span>Everyone</span></h3>
+</section>
+<div width="100%" class="InfoCard">
+    <div class="offer">
+        <div>
+            <h2>QuickAid: Delivery for Everyone</h2>
+            <p>At QuickAid, we believe that healthcare should be accessible to everyone, no matter where you are. Our delivery service is designed to ensure that every individual has access to the medications and healthcare products they need, right at their doorstep.</p>
+            <p>Whether you live in a bustling city or a remote village, QuickAid is committed to bridging the distance between you and essential healthcare. Our extensive network of local pharmacies and healthcare providers allows us to deliver a wide range of products and services swiftly and efficiently, ensuring that you never have to go without the care you need.</p>
+            <p>Our services include:</p>
+            <ul>
+                <li><strong>Nationwide Coverage:</strong> We deliver to every corner of the country, making sure that no one is left behind when it comes to accessing quality healthcare.</li>
+                <li><strong>Timely Deliveries:</strong> QuickAid's efficient logistics ensure that your medications and healthcare products arrive on time, every time, so you can focus on your health without any worries.</li>
+                <li><strong>Affordable Options:</strong> We work with local providers to offer competitive pricing and special discounts, making healthcare more affordable for everyone.</li>
+                <li><strong>Inclusive Service:</strong> QuickAid is dedicated to serving diverse communities, including those in underserved areas, ensuring that everyone has equal access to essential healthcare services.</li>
+            </ul>
+            <p>QuickAid is more than just a delivery service; it's a promise to make healthcare accessible to all. No matter where you are, you can rely on QuickAid to bring the care you need directly to your door.</p>
+            <p>Join us in our mission to provide healthcare for everyone, everywhere. With QuickAid, quality care is just a delivery away.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- team member -->
+ <div class="blockview">
+<section class="features" id="features">
+    <h3 class="heading">Our <span>Team Members</span></h3>
+</section>
+</div>
+<div class="blockview">
+    <div class="services-section">
+      <div class="service-cards">
+          
+        <div class="service-card">
+          <div class="card-inner">
+              <div class="thefront" style="background-image:url('/images/manreet.png');">
+                  <!-- <h3>Medicine Delivery</h3> -->
+              </div>
+              <div class="theback">
+                    <h3>Manreet kaur</h3>
+                    <h3>2310990937</h3>
+                    <h3>Contact Us 👇</h3>
+                  <div class="footer-sosmed mt-3">
+                    <a href="https://twitter.com/ShrutiB95043520" target="_blank"><span class="fa-brands fa-google-plus"></span></a>
+                    <a href="https://www.instagram.com/_shruti.022/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+                    <a href="https://www.linkedin.com/in/shrutibansal022/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="service-card">
+        <div class="card-inner">
+            <div class="thefront" style="background-image:url('/images/sargam.jpg');">
+                <!-- <h3>Medicine Delivery</h3> -->
+            </div>
+            <div class="theback">
+                  <h3>Sargam</h3>
+                  <h3>2310990961</h3>
+                  <h3>Contact Us 👇</h3>
+                <div class="footer-sosmed mt-3">
+                  <a href="https://twitter.com/ShrutiB95043520" target="_blank"><span class="fa-brands fa-google-plus"></span></a>
+                  <a href="https://www.instagram.com/_shruti.022/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+                  <a href="https://www.linkedin.com/in/shrutibansal022/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div class="service-card">
+        <div class="card-inner">
+            <div class="thefront" style="background-image:url('/images/sarthak.jpg');">
+                <!-- <h3>Medicine Delivery</h3> -->
+            </div>
+            <div class="theback">
+                  <h3>Sarthak</h3>
+                  <h3>231090962</h3>
+                  <h3>Contact Us 👇</h3>
+                <div class="footer-sosmed mt-3">
+                  <a href="https://twitter.com/ShrutiB95043520" target="_blank"><span class="fa-brands fa-google-plus"></span></a>
+                  <a href="https://www.instagram.com/_shruti.022/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+                  <a href="https://www.linkedin.com/in/shrutibansal022/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="service-card">
+        <div class="card-inner">
+            <div class="thefront" style="background-image:url('/images/shruti.jpeg');">
+                <!-- <h3>Medicine Delivery</h3> -->
+            </div>
+            <div class="theback">
+                  <h3>Shruti</h3>
+                  <h3>2310990971</h3>
+                  <h3>Contact Us 👇</h3>
+                <div class="footer-sosmed mt-3">
+                  <a href="https://twitter.com/ShrutiB95043520" target="_blank"><span class="fa-brands fa-google-plus"></span></a>
+                  <a href="https://www.instagram.com/_shruti.022/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+                  <a href="https://www.linkedin.com/in/shrutibansal022/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blockview">
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row px-md-3">
+          <div class="col-sm-6 col-lg-3 py-3">
+            <h5>Quickaid</h5>
+            <ul class="footer-menu">
+              <li><a href="/pages/corpo.html">About Us</a></li>
+              <li><a href="/pages/offers.html">Offers</a></li>
+              <li><a href="/pages/help.html">Need Help</a></li>
+              <li><a href="/pages/sign.html">Sign-in</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3 py-3">
+            <h5>Services</h5>
+            <ul class="footer-menu">
+              <li><a href="#">Medicine Delivery</a></li>
+              <li><a href="">Consultation</a></li>
+              <li><a href="#">Dietry Advice</a></li>
+              <li><a href="/servicespage/nurse.html">Nursing</a></li>
+              <li><a href="/servicespage/labtest.html">Lab Test</a></li>
+              <li><a href="/servicespage/emergency.html">Emergency Service</a></li>
+              <li><a href="/servicespage/cutlery.html">Cutlery Rent</a></li>
+              <li><a href="/servicespage/donatemoney.html">Donate Money</a></li>
+              <li><a href="/servicespage/blood.html">Blood Donation</a></li>
+              <li><a href="/servicespage/medicineExchange.html">Medicine Exchange</a></li>
+              <li><a href="/servicespage/bed.html">Bed Booking</a></li>
+              <li><a href="/servicespage/yoga.html">Yoga Classes</a></li>
+              <li><a href="/servicespage/blogs.html">Health Blogs</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-sm-6 col-lg-3 py-3">
+            <h5>Join-Us</h5>
+            <ul class="footer-menu">
+              <li><a href="#">Join as Doctor</a></li>
+              <li><a href="#">Join as patient</a></li>
+              <li><a href="/servicespage/cutomersuggestion.html">Reviews</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3 py-3">
+            <h5>Contact</h5>
+            <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+            <a href="#" class="footer-link">701-573-7582</a>
+            <a href="#" class="footer-link">healthcare@temporary.net</a>
+    
+            <h5 class="mt-3">Social Media</h5>
+            <div class="footer-sosmed mt-3">
+              <a href="https://github.com/Shrutibansal22" target="_blank"><span class="fa-brands fa-github"></span></a>
+              <a href="https://twitter.com/ShrutiB95043520" target="_blank"><span class="fa-brands fa-twitter"></span></a>
+              <a href="shruti0971.be23@chitkara.edu.in" target="_blank"><span class="fa-brands fa-google-plus"></span></a>
+              <a href="https://www.instagram.com/_shruti.022/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+              <a href="https://www.linkedin.com/in/shruti-b466a128b/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+    
+        <hr>
+    
+        <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
+      </div>
+    </footer>
+    </div>
+</body>
+<script>
+    const counters=document.querySelectorAll('.counter');
+
+counters.forEach((counter)=>{
+    //console.log(counter);
+    counter.innerHTML=0;
+    const updateCounter=()=>{
+        const targetCount=+counter.getAttribute('data-target');
+        console.log(targetCount);
+        //thses are strings basically 4000 vgrh strings hain
+    //+ likhne se string se number mein convert hogya
+    const startingCount=Number(counter.innerHTML);
+    const incr=targetCount/100;
+
+    if(startingCount<targetCount){
+        counter.innerHTML=`${Math.round(startingCount+incr)}`;
+        setTimeout(updateCounter,10)
+    }else{
+        counter.innerhtml=targetCount;
+    }
+    }
+    
+    
+    updateCounter();
+})
+</script>
+</html>

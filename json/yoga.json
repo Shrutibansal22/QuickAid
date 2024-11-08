@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Beginner Yoga for Flexibility",
+        "duration": "20 minutes",
+        "summary": "A gentle yoga routine designed to improve flexibility for beginners.",
+        "url": "https://www.youtube.com/watch?v=v7AYKMP6rOE",
+        "videoUrl": "https://www.youtube.com/embed/v7AYKMP6rOE",
+        "classes": [
+            {"timing": "Monday 6 PM", "location": "Yoga Studio A"},
+            {"timing": "Wednesday 7 PM", "location": "Yoga Studio B"}
+        ]
+    },
+    {
+        "id": 2,
+        "title": "10-Minute Morning Yoga Stretch",
+        "duration": "10 minutes",
+        "summary": "Start your day with this quick morning yoga routine to energize your body.",
+        "url": "https://www.youtube.com/watch?v=5sE8iB1Yw8A",
+        "videoUrl": "https://www.youtube.com/embed/5sE8iB1Yw8A",
+        "classes": [
+            {"timing": "Tuesday 8 AM", "location": "Yoga Studio C"},
+            {"timing": "Thursday 8 AM", "location": "Yoga Studio A"}
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Yoga for Relaxation and Stress Relief",
+        "duration": "30 minutes",
+        "summary": "A calming yoga session focused on relaxation and reducing stress.",
+        "url": "https://www.youtube.com/watch?v=Z5pE8LkK0nI",
+        "videoUrl": "https://www.youtube.com/embed/Z5pE8LkK0nI",
+        "classes": [
+            {"timing": "Friday 5 PM", "location": "Yoga Studio B"},
+            {"timing": "Saturday 10 AM", "location": "Yoga Studio C"}
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Full Body Yoga Flow",
+        "duration": "35 minutes",
+        "summary": "A full-body yoga flow that targets all major muscle groups.",
+        "url": "https://www.youtube.com/watch?v=4YbV4K9sEHE",
+        "videoUrl": "https://www.youtube.com/embed/4YbV4K9sEHE",
+        "classes": [
+            {"timing": "Sunday 9 AM", "location": "Yoga Studio A"},
+            {"timing": "Tuesday 7 PM", "location": "Yoga Studio C"}
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Evening Yoga to Unwind",
+        "duration": "25 minutes",
+        "summary": "A soothing evening yoga routine to help you relax and sleep better.",
+        "url": "https://www.youtube.com/watch?v=0o0kLwwU1zM",
+        "videoUrl": "https://www.youtube.com/embed/0o0kLwwU1zM",
+        "classes": [
+            {"timing": "Monday 8 PM", "location": "Yoga Studio B"},
+            {"timing": "Thursday 6 PM", "location": "Yoga Studio A"}
+        ]
+    }
+]

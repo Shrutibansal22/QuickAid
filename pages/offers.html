@@ -4,41 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="/css/1.css">
     <link rel="icon" type="image/x-icon" href="logof.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .InfoCard {
     width: 100%;
-    padding: 0 20px; /* Adjust the padding values as needed */
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
 .offer {
-    background-color: #d8e6e5; /* Background color for the offer section */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside the offer section */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #d8e6e5; 
+    border-radius: 8px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .offer h2 {
-    font-size: 24px; /* Adjust font size as needed */
-    margin-bottom: 15px; /* Space below the heading */
-    color: #333; /* Text color */
+    font-size: 24px; 
+    margin-bottom: 15px; 
+    color: #333;
 }
 
 .offer p {
-    font-size: 16px; /* Adjust font size as needed */
-    line-height: 1.6; /* Line height for readability */
-    color: #555; /* Text color */
-    margin-bottom: 15px; /* Space below each paragraph */
+    font-size: 16px; 
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px; 
 }
+
+.offer-marquee {
+        background-color: #20d3f3; 
+        color: #000000;
+        font-size: 18px; 
+        padding: 10px 0;
+        white-space: nowrap; 
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+
+    .marquee-content {
+        display: inline-block; 
+        animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(100%); 
+        }
+        100% {
+            transform: translateX(-100%); 
+        }
+    }
+
+    /* timer */
+body {
+    background: #3b3838; /* Darker background for better contrast */
+    font-family: 'Arial', sans-serif; /* Common font for consistency */
+    color: #fff; /* Default text color */
+    padding: 20px;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 600px; /* Limit the width for better readability */
+    margin: auto;
+    text-align: center;
+}
+
+.heading {
+    color: #ffffff;
+    font-size: 48px; /* Increased size */
+    font-weight: bold; /* Bold for emphasis */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #d3d3d3; /* Lighter gray for better readability */
+    font-size: 18px; /* Increased size */
+    line-height: 1.5; /* Improved line spacing */
+    margin-bottom: 30px; /* Added space below description */
+}
+
+.timer {
+    display: flex;
+    justify-content: space-around; /* Use space-around for even spacing */
+    margin-top: 30px;
+}
+
+.sub_timer {
+    width: 120px; /* Fixed width for timers */
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 10px; /* Margin for spacing */
+}
+
+.digit {
+    color: #ffffff;
+    font-weight: bold; /* Bold for visibility */
+    font-size: 80px; /* Increased size */
+    padding: 20px 0; /* Padding for space */
+}
+
+.digit_name {
+    color: #000;
+    background: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold; /* Increased font weight */
+}
+
 
     </style>
 </head>
 <body>
     <nav class="sticky-navbar">
-        <img id="logo" src="logof.png" alt="logo image">
+        <img id="logo" src="/images/logof.png" alt="logo image">
         <input type="checkbox" id="sidebar-active">
         <label for="sidebar-active" class="open-sidebar-button">
             <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
@@ -54,13 +141,16 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </label>
 
-            <a class="location" href="#"><input type="textbox" placeholder="search for area and location..."></a>
+            <a class="location" href="#"><input type="textbox" placeholder="search for area and location..." style="height:50px; width:250px "></a>
             <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>
                 Use your current location</a>
         </div>
 
         <ul class="nav-right">
+            <li><a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#5f6368"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                Home</a></li>
+
             <li><a href="corpo.html"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
             Quick-aid corporatives</a></li>
 
@@ -96,9 +186,71 @@
         Sign-up</a></li>
     </div>
         
-    </nav>
+</nav>
+
+<!-- timer -->
+<div class="wrapper">
+    <h1 class="heading">Offers Ends Soon</h1>
+    <p class="description">👇 Grab It As Soon As Possible 👇</p>
+
+    <div class="timer">
+        <div class="sub_timer">
+            <h1 id="day" class="digit">00</h1>
+            <p class="digit_name">Days</p>
+        </div>
+        <div class="sub_timer">
+            <h1 id="hour" class="digit">00</h1>
+            <p class="digit_name">Hours</p>
+        </div>
+        <div class="sub_timer">
+            <h1 id="min" class="digit">00</h1>
+            <p class="digit_name">Minutes</p>
+        </div>
+        <div class="sub_timer">
+            <h1 id="sec" class="digit">00</h1>
+            <p class="digit_name">Seconds</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- javascript  -->
+<script>
+      var target_mili_sec = new Date("Oct 31, 2024 23:59:59").getTime();
+
+      function timer() {
+          var now_mili_sec = new Date().getTime();
+          var remaining_sec = Math.floor( (target_mili_sec - now_mili_sec) / 1000 );
+
+          var day = Math.floor(remaining_sec / (3600 * 24));
+          var hour = Math.floor((remaining_sec % (3600 * 24)) / 3600);
+          var min = Math.floor((remaining_sec % 3600) / 60);
+          var sec = Math.floor(remaining_sec % 60);
+
+          document.querySelector("#day").innerHTML = day;
+          document.querySelector("#hour").innerHTML = hour;
+          document.querySelector("#min").innerHTML = min;
+          document.querySelector("#sec").innerHTML = sec;
+      }
+
+      setInterval(timer, 1000); //1000 it means 1 sec
+      
+</script>
+<!-- timer -->
+
 <!-- content -->
+ <div class="blockview">
 <div class="container my-4">
+
+    <div class="offer-marquee">
+        <div class="marquee-content">
+            🎉 Exclusive Discounts on Medications!  🎉 Exclusive Discounts on Medications! 🎉 Exclusive Discounts on Medications!  🎉 Exclusive Discounts on Medications! 
+        </div>
+    </div>
     <div class="row featurette d-flex justify-content-center align-items-center">
         <div class="col-md-7">
           <h2 class="featurette-heading fw-normal lh-1">Exclusive Discounts on Medications <span class="text-body-secondary">Just for You.</span></h2>
@@ -107,12 +259,20 @@
           <p>From everyday essentials to specialized treatments, find all your pharmaceutical needs at a fraction of the cost. Don’t miss out on these valuable offers – shop now and save big with QuickAid!</p>
         </div>
         <div class="col-md-5">
-            <img  width="300" height="300" src="offer1.jpg" alt="" >
+            <a href="https://www.amazon.in/Home-Medical-Supplies-Equipments/b?ie=UTF8&node=1374593031" ><img  width="300" height="300" src="/images/offer1.jpg" alt="" ></a>
           <!--we can use responsive images by going on bootstrap with class="img fluid"-->
         </div>
       </div>
  </div>
+</div>
+<div class="blockview">
  <div class="container my-4">
+
+    <div class="offer-marquee">
+        <div class="marquee-content">
+            💊 Amazing Deals on Medical Supplies! 💊 Amazing Deals on Medical Supplies! 💊 Amazing Deals on Medical Supplies! 💊 Amazing Deals on Medical Supplies!
+        </div>
+    </div>
     <div class="row featurette d-flex justify-content-center align-items-center">
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading fw-normal lh-1">Special Offers on Medical Supplies <span class="text-body-secondary">For Your Convenience.</span></h2>
@@ -121,12 +281,19 @@
           <p>Take advantage of these offers to stock up on essentials and enhance your home care routine. QuickAid is here to support your health needs while saving you money.</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <img  width="300" height="300" src="offer2.avif" alt="" class="src">
+            <a href="https://www.amazon.in/Home-Medical-Supplies-Equipments/b?ie=UTF8&node=1374593031" ><img  width="300" height="300" src="/images/offer2.avif" alt="" class="src"></a>
           
       </div>
  </div>
  </div>
+</div>
+<div class="blockview">
  <div class="container my-4">
+    <div class="offer-marquee">
+        <div class="marquee-content">
+            🩺 Special Offers on Health Consultations! 🩺 Special Offers on Health Consultations! 🩺 Special Offers on Health Consultations!🩺 Special Offers on Health Consultations!
+        </div>
+    </div>
     <div class="row featurette d-flex justify-content-center align-items-center">
         <div class="col-md-7">
           <h2 class="featurette-heading fw-normal lh-1">Exclusive Deals on Health Consultations  <span class="text-body-secondary">Book Your Appointment Now.</span></h2>
@@ -135,12 +302,19 @@
           <p>Book your appointment today and benefit from our limited-time offers. QuickAid is dedicated to making quality healthcare accessible and affordable for everyone.</p>
         </div>
         <div class="col-md-5">
-            <img  width="300" height="300" src="offer6.avif" alt="">
+            <a href="https://www.amazon.in/Home-Medical-Supplies-Equipments/b?ie=UTF8&node=1374593031" ><img  width="300" height="300" src="/images/offer3.avif" alt=""></a>
           
         </div>
       </div>
  </div>
+</div>
+<div class="blockview">
  <div class="container my-4">
+    <div class="offer-marquee">
+        <div class="marquee-content">
+            🌟 Discounts on Wellness Products! 🌟 Discounts on Wellness Products! 🌟 Discounts on Wellness Products! 🌟 Discounts on Wellness Products!
+        </div>
+    </div>
     <div class="row featurette d-flex justify-content-center align-items-center">
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading fw-normal lh-1">Amazing Discounts on Wellness Products <span class="text-body-secondary">Boost Your Health.</span></h2>
@@ -149,12 +323,19 @@
           <p>Don’t miss these exceptional offers – shop now and enhance your health with QuickAid’s wellness deals!</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <img  width="300" height="300" src="offer4.avif" alt="" class="src">
+            <a href="https://www.amazon.in/Home-Medical-Supplies-Equipments/b?ie=UTF8&node=1374593031" ><img  width="300" height="300" src="/images/offer4.avif" alt="" class="src"></a>
           
       </div>
  </div>
  </div>
+</div>
+<div class="blockview">
  <div class="container my-4">
+    <div class="offer-marquee">
+        <div class="marquee-content">
+            🏥 Limited-Time Offers on Health Insurance!  🏥 Limited-Time Offers on Health Insurance!  🏥 Limited-Time Offers on Health Insurance!  🏥 Limited-Time Offers on Health Insurance! 
+        </div>
+    </div>
     <div class="row featurette d-flex justify-content-center align-items-center">
         <div class="col-md-7">
           <h2 class="featurette-heading fw-normal lh-1">Limited-Time Offers on Health Insurance <span class="text-body-secondary">Protect Yourself and Your Family.</span></h2>
@@ -163,12 +344,19 @@
           <p>Act now to benefit from our special rates and ensure you’re protected. QuickAid is here to support your health and financial well-being with unbeatable insurance offers.</p>
         </div>
         <div class="col-md-5">
-            <img  width="300" height="300" src="offer5.avif" alt="">
+            <a href="https://www.amazon.in/Home-Medical-Supplies-Equipments/b?ie=UTF8&node=1374593031" ><img  width="300" height="300" src="/images/offer5.avif" alt=""></a>
           
         </div>
       </div>
  </div>
+</div>
+<div class="blockview">
  <div class="container my-4">
+        <div class="offer-marquee">
+            <div class="marquee-content">
+                🛠️ Savings on Medical Equipment! 🛠️ Savings on Medical Equipment!  🛠️ Savings on Medical Equipment! 🛠️ Savings on Medical Equipment!
+            </div>
+        </div>
     <div class="row featurette d-flex justify-content-center align-items-center">
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading fw-normal lh-1">Exclusive Savings on Medical Equipment<span class="text-body-secondary">For Better Health Management.</span></h2>
@@ -177,72 +365,80 @@
           <p>Don’t miss out on these savings – explore our offers today and enhance your health with QuickAid’s medical equipment deals!</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <img  width="300" height="300" src="offer3.avif" alt="" class="src">
+            <a href="https://www.amazon.in/Home-Medical-Supplies-Equipments/b?ie=UTF8&node=1374593031" ><img  width="300" height="300" src="/images/offer6.avif" alt="" class="src"></a>
           
       </div>
  </div>
  </div>
-
-<div width="100%" class="InfoCard">
-<div class="offer">
-    <div>
-        <h2>Unlock Amazing Offers on Medications and Health Services Near You</h2>
-<p>Get ready for a health-boosting journey with unbeatable offers on medications and healthcare services through QuickAid. Whether you need essential medications, medical consultations, or wellness products, now is the perfect time to save big while taking care of your health.</p>
-<p>Top pharmacies and healthcare providers are offering irresistible deals and discounts that you won’t want to miss. From exclusive discounts on prescription drugs to special rates on wellness consultations, there's something for everyone at QuickAid to enhance your well-being without straining your budget.</p>
-<p>Imagine saving on crucial medications while receiving high-quality care or accessing wellness products at reduced prices. With these fantastic offers, maintaining your health and managing medical expenses has never been more affordable.</p>
-<p>Whether you’re stocking up on medications, booking a health consultation, or exploring wellness products, take advantage of these incredible deals. It’s time to prioritize your health while enjoying substantial savings. Don’t miss out – take action now, support your local pharmacies and healthcare providers, and make every healthcare decision both beneficial and cost-effective with QuickAid!</p>
-
-    </div>
 </div>
-</div> 
+
+
+
+
+
 <!-- content -->
-    <footer>
-        <div class="foot-panel1">
-            Back To Top
+<div class="blockview">
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row px-md-3">
+          <div class="col-sm-6 col-lg-3 py-3">
+            <h5>Quickaid</h5>
+            <ul class="footer-menu">
+              <li><a href="/pages/corpo.html">About Us</a></li>
+              <li><a href="/pages/offers.html">Offers</a></li>
+              <li><a href="/pages/help.html">Need Help</a></li>
+              <li><a href="/pages/sign.html">Sign-in</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3 py-3">
+            <h5>Services</h5>
+            <ul class="footer-menu">
+              <li><a href="#">Medicine Delivery</a></li>
+              <li><a href="">Consultation</a></li>
+              <li><a href="#">Dietry Advice</a></li>
+              <li><a href="/servicespage/nurse.html">Nursing</a></li>
+              <li><a href="/servicespage/labtest.html">Lab Test</a></li>
+              <li><a href="/servicespage/emergency.html">Emergency Service</a></li>
+              <li><a href="/servicespage/cutlery.html">Cutlery Rent</a></li>
+              <li><a href="/servicespage/donatemoney.html">Donate Money</a></li>
+              <li><a href="/servicespage/blood.html">Blood Donation</a></li>
+              <li><a href="/servicespage/medicineExchange.html">Medicine Exchange</a></li>
+              <li><a href="/servicespage/bed.html">Bed Booking</a></li>
+              <li><a href="/servicespage/yoga.html">Yoga Classes</a></li>
+              <li><a href="/servicespage/blogs.html">Health Blogs</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-sm-6 col-lg-3 py-3">
+            <h5>Join-Us</h5>
+            <ul class="footer-menu">
+              <li><a href="#">Join as Doctor</a></li>
+              <li><a href="#">Join as patient</a></li>
+              <li><a href="/servicespage/cutomersuggestion.html">Reviews</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3 py-3">
+            <h5>Contact</h5>
+            <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+            <a href="#" class="footer-link">701-573-7582</a>
+            <a href="#" class="footer-link">healthcare@temporary.net</a>
+    
+            <h5 class="mt-3">Social Media</h5>
+            <div class="footer-sosmed mt-3">
+              <a href="https://github.com/Shrutibansal22" target="_blank"><span class="fa-brands fa-github"></span></a>
+              <a href="https://twitter.com/ShrutiB95043520" target="_blank"><span class="fa-brands fa-twitter"></span></a>
+              <a href="shruti0971.be23@chitkara.edu.in" target="_blank"><span class="fa-brands fa-google-plus"></span></a>
+              <a href="https://www.instagram.com/_shruti.022/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+              <a href="https://www.linkedin.com/in/shruti-b466a128b/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
+            </div>
+          </div>
         </div>
-
-        <div class="foot-panel2">
-            <ul>
-                <p>Feel Free To Follow<p>
-                <p>Us On Our Social Media</p>
-                <p>Handle All The Links Are</p>
-                <p>Given Below : </p>
-                <a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28px" ><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="32px" ><linearGradient id="Ld6sqrtcxMyckEl6xeDdMa" x1="9.993" x2="40.615" y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2aa4f4"/><stop offset="1" stop-color="#007ad9"/></linearGradient><path fill="url(#Ld6sqrtcxMyckEl6xeDdMa)" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"/><path fill="#fff" d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="32px" ><path d="M 11 4 C 7.1456661 4 4 7.1456661 4 11 L 4 39 C 4 42.854334 7.1456661 46 11 46 L 39 46 C 42.854334 46 46 42.854334 46 39 L 46 11 C 46 7.1456661 42.854334 4 39 4 L 11 4 z M 11 6 L 39 6 C 41.773666 6 44 8.2263339 44 11 L 44 39 C 44 41.773666 41.773666 44 39 44 L 11 44 C 8.2263339 44 6 41.773666 6 39 L 6 11 C 6 8.2263339 8.2263339 6 11 6 z M 13.085938 13 L 22.308594 26.103516 L 13 37 L 15.5 37 L 23.4375 27.707031 L 29.976562 37 L 37.914062 37 L 27.789062 22.613281 L 36 13 L 33.5 13 L 26.660156 21.009766 L 21.023438 13 L 13.085938 13 z M 16.914062 15 L 19.978516 15 L 34.085938 35 L 31.021484 35 L 16.914062 15 z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="32px" ><path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 14 11.011719 C 12.904779 11.011719 11.919219 11.339079 11.189453 11.953125 C 10.459687 12.567171 10.011719 13.484511 10.011719 14.466797 C 10.011719 16.333977 11.631285 17.789609 13.691406 17.933594 A 0.98809878 0.98809878 0 0 0 13.695312 17.935547 A 0.98809878 0.98809878 0 0 0 14 17.988281 C 16.27301 17.988281 17.988281 16.396083 17.988281 14.466797 A 0.98809878 0.98809878 0 0 0 17.986328 14.414062 C 17.884577 12.513831 16.190443 11.011719 14 11.011719 z M 14 12.988281 C 15.392231 12.988281 15.94197 13.610038 16.001953 14.492188 C 15.989803 15.348434 15.460091 16.011719 14 16.011719 C 12.614594 16.011719 11.988281 15.302225 11.988281 14.466797 C 11.988281 14.049083 12.140703 13.734298 12.460938 13.464844 C 12.78117 13.19539 13.295221 12.988281 14 12.988281 z M 11 19 A 1.0001 1.0001 0 0 0 10 20 L 10 39 A 1.0001 1.0001 0 0 0 11 40 L 17 40 A 1.0001 1.0001 0 0 0 18 39 L 18 33.134766 L 18 20 A 1.0001 1.0001 0 0 0 17 19 L 11 19 z M 20 19 A 1.0001 1.0001 0 0 0 19 20 L 19 39 A 1.0001 1.0001 0 0 0 20 40 L 26 40 A 1.0001 1.0001 0 0 0 27 39 L 27 29 C 27 28.170333 27.226394 27.345035 27.625 26.804688 C 28.023606 26.264339 28.526466 25.940057 29.482422 25.957031 C 30.468166 25.973981 30.989999 26.311669 31.384766 26.841797 C 31.779532 27.371924 32 28.166667 32 29 L 32 39 A 1.0001 1.0001 0 0 0 33 40 L 39 40 A 1.0001 1.0001 0 0 0 40 39 L 40 28.261719 C 40 25.300181 39.122788 22.95433 37.619141 21.367188 C 36.115493 19.780044 34.024172 19 31.8125 19 C 29.710483 19 28.110853 19.704889 27 20.423828 L 27 20 A 1.0001 1.0001 0 0 0 26 19 L 20 19 z M 12 21 L 16 21 L 16 33.134766 L 16 38 L 12 38 L 12 21 z M 21 21 L 25 21 L 25 22.560547 A 1.0001 1.0001 0 0 0 26.798828 23.162109 C 26.798828 23.162109 28.369194 21 31.8125 21 C 33.565828 21 35.069366 21.582581 36.167969 22.742188 C 37.266572 23.901794 38 25.688257 38 28.261719 L 38 38 L 34 38 L 34 29 C 34 27.833333 33.720468 26.627107 32.990234 25.646484 C 32.260001 24.665862 31.031834 23.983076 29.517578 23.957031 C 27.995534 23.930001 26.747519 24.626988 26.015625 25.619141 C 25.283731 26.611293 25 27.829667 25 29 L 25 38 L 21 38 L 21 21 z"/></svg></a>
-            </ul>
-
-            <ul>
-                <p><h4>Contact Info</h4></p>
-                <a><svg xmlns="http://www.w3.org/2000/svg" height="15px" width="15px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>+91 9876543211</a>
-                <a><svg xmlns="http://www.w3.org/2000/svg" height="15px" width="15px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>+91 9865433222</a>
-                <a><svg xmlns="http://www.w3.org/2000/svg" height="15px" width="15px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>abc@gmail.com</a>
-                <a><svg xmlns="http://www.w3.org/2000/svg" height="15px" width="15px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>fgh@gmail.com</a>
-                <a><svg xmlns="http://www.w3.org/2000/svg" height="15px" width="15px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-301q99-80 149.5-154T680-594q0-90-56-148t-144-58q-88 0-144 58t-56 148q0 65 50.5 139T480-301Zm0 101Q339-304 269.5-402T200-594q0-125 78-205.5T480-880q124 0 202 80.5T760-594q0 94-69.5 192T480-200Zm0-320q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520ZM200-80v-80h560v80H200Zm280-520Z"/></svg>Quickaid-centre</a>
-            </ul>
-
-            <ul>
-                <p><h4>Get to know Us</h4></p>
-                <a>Careers</a>
-                <a>Blogs</a>
-                <a>Team</a>
-                <a>About Us</a>
-                <a>Services</a>
-            </ul>
-
-            <ul>
-                <p>Write About Your Experience</p> 
-                <p>And Give Us Your Reviews</p> 
-                <p>For Better Updation :</p>
-                <input type="text" placeholder="enter your reviews....." style="height:50px; width:150px;"><br>
-                <button type="button" style="height:30px; width:70px;">Send Us</button>
-            </ul>
-        </div>
-
-    </footer>
-    <div class="copyright">
-        <p>&copy; 2024 QuickAid. All rights reserved.</p>
+    
+        <hr>
+    
+        <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
       </div>
+    </footer>
+    </div>
 </body>
 </html>

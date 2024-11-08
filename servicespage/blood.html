@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation</title>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.parallax-header {
+    background-image: url('/images/khoon.jpg');
+    height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header-content {
+    z-index: 2;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #00698f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #005f7f;
+    transform: scale(1.05);
+}
+
+.content {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+h2 {
+    margin: 20px 0;
+    color: #00698f;
+}
+
+.service-card {
+    margin: 20px auto;
+    max-width: 400px;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.thefront {
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.theback {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.badge-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.badge {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #00698f;
+    transition: transform 0.3s;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+}
+
+.help-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+}
+
+.form-popup label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.form-popup input,
+.form-popup select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-popup input:focus,
+.form-popup select:focus {
+    border-color: #00698f;
+}
+
+.form-popup button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.form-popup button:hover {
+    background-color: #218838;
+}
+
+.close-btn {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="parallax-header">
+        <div class="header-content">
+            <h1>Donate Blood, Save Lives</h1>
+            <p>Join us in making a difference. Find out how you can contribute.</p>
+            <a href="https://www.bloodcenter.org/donate/" class="btn">Learn More</a>
+        </div>
+    </header>
+
+    <section id="donation-info" class="content">
+        <h2>About Blood Donation</h2>
+        <p>Donate blood or consent to body donation, handled with care and legal compliance. Here’s how you can contribute:</p>
+        <div class="service-card">
+            <div class="thefront" style="background-image:url('/images/centres.jpg');">
+                <h3>Blood Donation Centers</h3>
+            </div>
+            <div class="theback">
+                <p>Find the nearest blood donation center and its timings.</p>
+                <button onclick="toggleForm()" class="btn">Book Your Appointment</button>
+            </div>
+        </div>
+        
+        <div class="badge-section">
+            <h2>Your Achievements</h2>
+            <div class="badge">First Donation</div>
+            <div class="badge">5 Donations</div>
+            <div class="badge">10 Donations</div>
+        </div>
+
+        <div class="help-section">
+            <h2>After Donation Care</h2>
+            <p>Take care of yourself after donating blood. Stay hydrated and avoid heavy exercise.</p>
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="form-popup" id="formPopup">
+        <h2>Book Your Blood Donation</h2>
+        <form id="bookingForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+            <label for="location">Select Location:</label>
+            <select id="location" required>
+                <option value="">Choose a location...</option>
+                <option value="center1">Blood Donation Center 1</option>
+                <option value="center2">Blood Donation Center 2</option>
+            </select>
+            <label for="timing">Select Timing:</label>
+            <input type="datetime-local" id="timing" required>
+            <button type="submit">Submit</button>
+        </form>
+        <button onclick="toggleForm()" class="close-btn">Close</button>
+    </div>
+
+
+
+    <script>
+        function toggleForm() {
+            const overlay = document.getElementById('overlay');
+            const formPopup = document.getElementById('formPopup');
+            overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+            formPopup.style.display = formPopup.style.display === 'block' ? 'none' : 'block';
+        }
+
+        document.getElementById('bookingForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Your appointment is booked!');
+            toggleForm();
+        };
+    </script>
+</body>
+</html>

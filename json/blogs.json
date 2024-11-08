@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "title": "The Importance of Timely Medicine Delivery",
+        "date": "2024-10-15",
+        "summary": "Discover how timely medicine delivery can improve health outcomes and enhance patient satisfaction.",
+        "url": "https://example.com/blogs/medicine-delivery",
+        "videoUrl": "https://youtube.com/embed/sample-video-1"
+    },
+    {
+        "id": 2,
+        "title": "How to Choose the Right Online Medical Consultation Service",
+        "date": "2024-10-10",
+        "summary": "A guide to selecting the best online medical consultation services for your needs.",
+        "url": "https://example.com/blogs/medical-consultation",
+        "videoUrl": "https://youtube.com/embed/sample-video-2"
+    },
+    {
+        "id": 3,
+        "title": "Personalized Dietary Plans for Better Health",
+        "date": "2024-10-08",
+        "summary": "Learn the benefits of personalized dietary advice and how it can help you achieve your health goals.",
+        "url": "https://example.com/blogs/dietary-advice",
+        "videoUrl": "https://youtube.com/embed/sample-video-3"
+    },
+    {
+        "id": 4,
+        "title": "Understanding the Role of Nursing Care at Home",
+        "date": "2024-10-12",
+        "summary": "Explore how professional nursing care can support patients at home.",
+        "url": "https://example.com/blogs/nursing-care",
+        "videoUrl": "https://youtube.com/embed/sample-video-4"
+    },
+    {
+        "id": 5,
+        "title": "The Future of Lab Testing: Online and Convenient",
+        "date": "2024-10-14",
+        "summary": "How online lab testing is transforming healthcare accessibility.",
+        "url": "https://example.com/blogs/lab-testing",
+        "videoUrl": "https://youtube.com/embed/sample-video-5"
+    },
+    {
+        "id": 6,
+        "title": "When to Use Emergency Services: A Quick Guide",
+        "date": "2024-10-11",
+        "summary": "A quick guide on how to recognize emergencies and the importance of timely intervention.",
+        "url": "https://example.com/blogs/emergency-services",
+        "videoUrl": "https://youtube.com/embed/sample-video-6"
+    },
+    {
+        "id": 7,
+        "title": "Benefits of Renting Hospital Equipment",
+        "date": "2024-10-09",
+        "summary": "Learn why renting hospital equipment can be a cost-effective solution for patients.",
+        "url": "https://example.com/blogs/hospital-equipment-rent",
+        "videoUrl": "https://youtube.com/embed/sample-video-7"
+    },
+    {
+        "id": 8,
+        "title": "How Donations Can Improve Healthcare Access",
+        "date": "2024-10-07",
+        "summary": "Understanding the impact of donations on healthcare services and accessibility.",
+        "url": "https://example.com/blogs/donations-healthcare",
+        "videoUrl": "https://youtube.com/embed/sample-video-8"
+    },
+    {
+        "id": 9,
+        "title": "The Process and Importance of Blood Donation",
+        "date": "2024-10-06",
+        "summary": "Everything you need to know about blood and body donation processes.",
+        "url": "https://example.com/blogs/blood-donation",
+        "videoUrl": "https://youtube.com/embed/sample-video-9"
+    },
+    {
+        "id": 10,
+        "title": "Medicine Exchange Programs: How They Work",
+        "date": "2024-10-05",
+        "summary": "An overview of medicine exchange programs and their benefits for patients.",
+        "url": "https://example.com/blogs/medicine-exchange",
+        "videoUrl": "https://youtube.com/embed/sample-video-10"
+    },
+    {
+        "id": 11,
+        "title": "Tips for Booking Hospital Beds Online",
+        "date": "2024-10-04",
+        "summary": "A comprehensive guide to booking hospital beds quickly and easily.",
+        "url": "https://example.com/blogs/hospital-bed-booking",
+        "videoUrl": "https://youtube.com/embed/sample-video-11"
+    },
+    {
+        "id": 12,
+        "title": "Yoga: A Path to Better Health",
+        "date": "2024-10-03",
+        "summary": "Exploring the benefits of yoga classes for physical and mental well-being.",
+        "url": "https://example.com/blogs/yoga-classes",
+        "videoUrl": "https://youtube.com/embed/sample-video-12"
+    },
+    {
+        "id": 13,
+        "title": "Why Reading Health Blogs is Essential",
+        "date": "2024-10-02",
+        "summary": "The importance of staying informed about health through blogs by qualified professionals.",
+        "url": "https://example.com/blogs/health-blog",
+        "videoUrl": "https://youtube.com/embed/sample-video-13"
+    },
+    {
+        "id": 14,
+        "title": "Sharing Customer Experiences: Building Trust in Healthcare",
+        "date": "2024-10-01",
+        "summary": "The impact of sharing customer experiences on improving healthcare services.",
+        "url": "https://example.com/blogs/customer-experiences",
+        "videoUrl": "https://youtube.com/embed/sample-video-14"
+    },
+    {
+        "id": 15,
+        "title": "Telehealth: The Future of Healthcare",
+        "date": "2024-10-20",
+        "summary": "Exploring how telehealth services are changing the landscape of healthcare delivery.",
+        "url": "https://example.com/blogs/telehealth",
+        "videoUrl": "https://youtube.com/embed/sample-video-15"
+    },
+    {
+        "id": 16,
+        "title": "The Role of Technology in Modern Medicine",
+        "date": "2024-10-19",
+        "summary": "A look at how technology is revolutionizing medical practices.",
+        "url": "https://example.com/blogs/technology-in-medicine",
+        "videoUrl": "https://youtube.com/embed/sample-video-16"
+    },
+    {
+        "id": 17,
+        "title": "Understanding Mental Health: Resources and Support",
+        "date": "2024-10-18",
+        "summary": "Important resources and strategies for maintaining mental health.",
+        "url": "https://example.com/blogs/mental-health",
+        "videoUrl": "https://youtube.com/embed/sample-video-17"
+    },
+    {
+        "id": 18,
+        "title": "The Benefits of Regular Health Check-Ups",
+        "date": "2024-10-17",
+        "summary": "Why regular health check-ups are crucial for early detection and prevention.",
+        "url": "https://example.com/blogs/health-checkups",
+        "videoUrl": "https://youtube.com/embed/sample-video-18"
+    },
+    {
+        "id": 19,
+        "title": "Nutrition Myths: Debunking Common Misconceptions",
+        "date": "2024-10-16",
+        "summary": "Separating fact from fiction in dietary advice and nutrition.",
+        "url": "https://example.com/blogs/nutrition-myths",
+        "videoUrl": "https://youtube.com/embed/sample-video-19"
+    },
+    {
+        "id": 20,
+        "title": "Fitness at Home: Effective Workouts and Routines",
+        "date": "2024-10-15",
+        "summary": "How to stay fit with effective workouts you can do at home.",
+        "url": "https://example.com/blogs/fitness-at-home",
+        "videoUrl": "https://youtube.com/embed/sample-video-20"
+    }
+]
