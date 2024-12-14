@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - QuickAid</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f8fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1E90FF;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-header img:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-header h2 {
+            font-size: 24px;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .profile-info {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        .profile-info p {
+            margin: 10px 0;
+        }
+
+        .profile-info strong {
+            color: #1E90FF;
+        }
+
+        .edit-btn {
+            background-color: #1E90FF;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-btn:hover {
+            background-color: #187bcd;
+        }
+
+        .edit-btn:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <img id="profile-image" src="https://via.placeholder.com/150" alt="Profile Image">
+            <h2 id="user-name">John Doe</h2>
+        </div>
+
+        <div class="profile-info">
+            <p><strong>First Name:</strong> <span id="firstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Phone:</strong> <span id="phone"></span></p>
+            <p><strong>Gender:</strong> <span id="gender"></span></p>
+            <p><strong>Language:</strong> <span id="language"></span></p>
+            <p><strong>Address:</strong> <span id="address"></span></p>
+        </div>
+
+        <button class="edit-btn" onclick="window.location.href='edit.html'">Edit Profile</button>
+    </div>
+
+    <script>
+        // Load profile data from localStorage
+        window.onload = function() {
+            const savedProfile = localStorage.getItem('profileData');
+            if (savedProfile) {
+                const profileData = JSON.parse(savedProfile);
+                document.getElementById('firstName').textContent = profileData.firstName;
+                document.getElementById('lastName').textContent = profileData.lastName;
+                document.getElementById('email').textContent = profileData.email;
+                document.getElementById('phone').textContent = profileData.phone;
+                document.getElementById('gender').textContent = profileData.gender;
+                document.getElementById('language').textContent = profileData.language;
+                document.getElementById('address').textContent = profileData.address;
+                document.getElementById('profile-image').src = profileData.profileImage || document.getElementById('profile-image').src;
+                document.getElementById('user-name').textContent = `${profileData.firstName} ${profileData.lastName}`;
+            }
+        };
+    </script>
+</body>
+</html>

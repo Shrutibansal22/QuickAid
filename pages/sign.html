@@ -1,145 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        
-        .dialog-container {
-            width: 400px;
-            background: #28a745;
-            border-radius: 15px;
-            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            padding: 20px;
-        }
-        
-        .dialog-box {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-        }
-        
-        h2 {
-            text-align: center;
-            color: #28a745;
-            margin-bottom: 20px;
-        }
-        
-        .input-group {
-            margin-bottom: 15px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #28a745;
-        }
-        
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: border-color 0.3s;
-        }
-        
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            border-color: #28a745;
-            outline: none;
-        }
-        
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-        
-        button:hover {
-            background: #218838; /* Darker green on hover */
-        }
 
-        .login-text {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #f5f5f5;
-        }
-
-        .login-text a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .login-text a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-
-<body>
-  <form action="/pages/login.html" method="post" onsubmit="return saveForm()">
-    <div class="dialog-container">
-        <div class="dialog-box">
-            <h2>Register</h2>
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Enter your username" required>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f5f5f5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            
+            .dialog-container {
+                width: 400px;
+                background: #28a745;
+                border-radius: 15px;
+                box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                padding: 20px;
+            }
+            
+            .dialog-box {
+                background: white;
+                border-radius: 15px;
+                padding: 20px;
+            }
+            
+            h2 {
+                text-align: center;
+                color: #28a745;
+                margin-bottom: 20px;
+            }
+            
+            .input-group {
+                margin-bottom: 15px;
+            }
+            
+            label {
+                display: block;
+                margin-bottom: 5px;
+                color: #28a745;
+            }
+            
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                transition: border-color 0.3s;
+            }
+            
+            input[type="text"]:focus,
+            input[type="password"]:focus {
+                border-color: #28a745;
+                outline: none;
+            }
+            
+            button {
+                width: 100%;
+                padding: 10px;
+                background: #28a745;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background 0.3s;
+            }
+            
+            button:hover {
+                background: #218838; /* Darker green on hover */
+            }
+    
+            .login-text {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #f5f5f5;
+            }
+    
+            .login-text a {
+                text-decoration: none;
+                color: black;
+            }
+    
+            .login-text a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    
+    <body>
+      <form action="/pages/login.html" method="post" onsubmit="return saveForm()" name="">
+        <div class="dialog-container">
+            <div class="dialog-box">
+                <h2>Register</h2>
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" name="confirm-password" required>
+                </div>
+                <button type="submit">Register</button>
             </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
-            </div>
-            <div class="input-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
-            </div>
-            <button type="submit">Register</button>
+            <p class="login-text">Already have an account? <a href="/pages/login.html">Login Here</a></p>
         </div>
-        <p class="login-text">Already have an account? <a href="/pages/login.html">Login Here</a></p>
-    </div>
-  </form>
-    <script type="text/javascript">
-      function saveForm() {
-          let un = document.getElementById("username").value;
-          let pw = document.getElementById("password").value;
-          let confirmPw = document.getElementById("confirm-password").value;
-
-          // Validate password and confirm password
-          if (pw !== confirmPw) {
-              alert("Passwords do not match. Please try again.");
+      </form>
+        <script type="text/javascript">
+          function saveForm() {
+              let un = document.getElementById("username").value;
+              let pw = document.getElementById("password").value;
+              let confirmPw = document.getElementById("confirm-password").value;
+    
+              // Validate password and confirm password
+              if (pw !== confirmPw) {
+                  alert("Passwords do not match. Please try again.");
+                  return false; // Prevent form submission
+              }
+    
+              // Get existing users from localStorage
+              let usernames = localStorage.getItem("usernames") ? localStorage.getItem("usernames").split(",") : [];
+              let passwords = localStorage.getItem("passwords") ? localStorage.getItem("passwords").split(",") : [];
+              let accountStatus = localStorage.getItem("accountStatus") ? localStorage.getItem("accountStatus").split(",") : [];
+              let isAdmin = localStorage.getItem("isAdmin") ? localStorage.getItem("isAdmin").split(",") : [];
+    
+              // Add new user to the arrays
+              usernames.push(un);
+              passwords.push(pw);
+              accountStatus.push('1'); // Default to active
+              isAdmin.push('0'); // Default to regular user
+    
+              // Save updated data to localStorage
+              localStorage.setItem("usernames", usernames.join(","));
+              localStorage.setItem("passwords", passwords.join(","));
+              localStorage.setItem("accountStatus", accountStatus.join(","));
+              localStorage.setItem("isAdmin", isAdmin.join(","));
+    
+              alert("Account created successfully! Redirecting to login page...");
+              window.location.href = "/pages/login.html"; // Redirect to login page
               return false; // Prevent form submission
           }
-
-          // Save to localStorage
-          localStorage.setItem("user", JSON.stringify({ username: un, password: pw }));
-
-          alert("Account created successfully! Redirecting to login page...");
-
-          // Redirect to login page
-          window.location.href = "/pages/login.html";
-
-          return false; // Prevent form submission
-      }
-    </script>
-</body>
-
-</html>
+        </script>
+    </body>
+    
+    </html>
+    

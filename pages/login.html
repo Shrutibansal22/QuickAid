@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+
+
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Animated Login Form</title>
+    <title>Login</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,10 +35,7 @@
             transform-style: preserve-3d;
             transition: transform 0.6s;
         }
-        /* .dialog-container:hover .dialog-box {
-            transform: rotateY(10deg);
-        } */
-        
+
         h2 {
             text-align: center;
             color: #28a745;
@@ -80,7 +80,7 @@
         }
         
         button:hover {
-            background: #28a745;
+            background: #218838;
         }
         
         .register-btn {
@@ -99,7 +99,7 @@
 </head>
 
 <body>
-    <form onsubmit="return validateLogin() " method="post">
+    <form onsubmit="return validateLogin()" method="post">
     <div class="dialog-container">
         <div class="dialog-box">
             <h2>Login</h2>
@@ -112,36 +112,37 @@
                 <input type="password" id="password" placeholder="Enter your password" required>
             </div>
             <button type="submit">Login</button>
-            <a href="/pages/sign.html"><button class="register-btn" type="button" >Register</button></a>
+            <a href="/pages/sign.html"><button class="register-btn" type="button">Register</button></a>
         </div>
     </div>
-</form>
+    </form>
+
     <script>
         function validateLogin() {
             let enteredUsername = document.getElementById("username").value;
             let enteredPassword = document.getElementById("password").value;
     
             // Retrieve stored user data from localStorage
-            let storedUser = JSON.parse(localStorage.getItem("user"));
+            let usernames = localStorage.getItem("usernames") ? localStorage.getItem("usernames").split(",") : [];
+            let passwords = localStorage.getItem("passwords") ? localStorage.getItem("passwords").split(",") : [];
+            let accountStatus = localStorage.getItem("accountStatus") ? localStorage.getItem("accountStatus").split(",") : [];
+            let isAdmin = localStorage.getItem("isAdmin") ? localStorage.getItem("isAdmin").split(",") : [];
     
-            if (storedUser) {
-                // Check if entered credentials match the stored credentials
-                if (enteredUsername === storedUser.username && enteredPassword === storedUser.password) {
+            for (let i = 0; i < usernames.length; i++) {
+                if (enteredUsername === usernames[i] && enteredPassword === passwords[i] && accountStatus[i] === '1') {
                     alert("Login successful!");
-                    
-                    // Redirect to index.html after successful login
-                    window.location.href = "/index.html";
-                    
-                    return false; // Prevent the form from submitting and reloading the page
-                } else {
-                    alert("Invalid username or password!");
-                    return false; // Prevent form submission if validation fails
+
+                    // Save user data in sessionStorage for persistent session
+                    sessionStorage.setItem("loggedInUser", usernames[i]);
+                    window.location.href = "/index.html"; // Redirect to index page
+                    return false; // Prevent form submission
+                } else if (enteredUsername === usernames[i] && enteredPassword === passwords[i] && accountStatus[i] === '0') {
+                    alert("User is banned!");
+                    return false; // Prevent form submission
                 }
-            } else {
-                alert("No user found! Please create an account.");
-                
-                return false; // Prevent form submission if no user data is found
             }
+            alert("Invalid username or password!");
+            return false; // Prevent form submission if credentials are wrong
         }
     </script>
 </body>
